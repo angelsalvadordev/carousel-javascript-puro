@@ -1,6 +1,5 @@
 *, *::before, *::after{
     box-sizing: border-box;
-    /* outline: 1px solid red; */
     margin: 0;
     padding: 0;
 }
@@ -8,13 +7,26 @@
 body{
     width: 100%;
     height: 100vh;
-    /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+    background-color: #4b6cb7;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    font-family: 'Merienda One', cursive;
+}
+
+.title{
+    width: 100%;
+    display: block;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color: #fff;
 }
 
 .main-carousel{
+    display: block;
     width: 100%;
     height: auto;
     display: flex;
@@ -23,20 +35,22 @@ body{
 
 .carousel{
     width: 100%;
-    height: 400px;
+    height: 350px;
     display: flex;  
     align-items: center;
     justify-content: center;
-    outline:1px solid green;
 }
 
 .carousel-items{
     width: 300px;
-    height: 400px;
+    height: 350px;
     position: relative;
     overflow: hidden;
-    margin: 0 10px;
-    outline:1px solid blue;
+}
+@media screen and (min-width: 660px){
+    .carousel-items{
+        width: 600px;
+    }
 }
 
 @media screen and (min-width: 960px){
@@ -60,7 +74,6 @@ body{
 .carousel-images{
     position: absolute;
    display: flex;
-   /* outline: 4px solid purple; */
    top: 0;
    left: 0;
    transition: left .5s;
@@ -71,45 +84,33 @@ body{
     height: 400px;
 }
 
+.carousel-item img{
+    display: block;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    box-sizing: padding-box;
+    border: 5px solid rgba(34, 34, 34, .4);
+    transition: border .2s;
+}
+
+.carousel-item img:hover{
+    border: 5px solid #222;
+}
+
 .carousel-arrow-left, .carousel-arrow-right{
-    width: 30px;
-    height: 30px;
-}
-
-.carousel-arrow-left::before, .carousel-arrow-right::before{
-    content: ">";
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    color: #fff;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.carousel-arrow-left::before{
-    content: "<";
-}
-
-.arrow-active{
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    border-radius: 50%;
+    width: auto;
+    height: auto;
+    background-color: #222;
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: 4em;
     cursor: pointer;
-    transition: all .25s;
+    color: #4b6cb7;
+    /* outline: 1px solid green; */
+    transition: color .5s;
 }
 
-.arrow-active:hover{
-    background-color: #333;
-}
-
-.arrow-desactive{
-    width: 30px;
-    height: 30px;
-    background-color: #000;
-    border-radius: 50%;
-    cursor: default;
-    opacity: .5;
+.carousel-arrow-left:hover, .carousel-arrow-right:hover{
+    color: #fff;
 }
