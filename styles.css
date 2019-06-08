@@ -21,7 +21,7 @@ body{
     display: block;
     text-align: center;
     margin-bottom: 2rem;
-    font-size: 4rem;
+    font-size: 1.5rem;
     color: #fff;
 }
 
@@ -51,17 +51,26 @@ body{
     .carousel-items{
         width: 600px;
     }
+    .title{
+        font-size: 2rem;
+    }
 }
 
 @media screen and (min-width: 960px){
     .carousel-items{
         width: 900px;
     }
+    .title{
+        font-size: 3rem;
+    }
 }
 
 @media screen and (min-width: 1260px){
     .carousel-items{
         width: 1200px;
+    }
+    .title{
+        font-size: 4rem;
     }
 }
 
