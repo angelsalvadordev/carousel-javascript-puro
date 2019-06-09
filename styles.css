@@ -1,3 +1,7 @@
+:root{
+    --width-item: 300px;
+}
+
 *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
@@ -42,42 +46,10 @@ body{
 }
 
 .carousel-items{
-    width: 300px;
+    width: var(--width-item);
     height: 350px;
     position: relative;
     overflow: hidden;
-}
-@media screen and (min-width: 660px){
-    .carousel-items{
-        width: 600px;
-    }
-    .title{
-        font-size: 2rem;
-    }
-}
-
-@media screen and (min-width: 960px){
-    .carousel-items{
-        width: 900px;
-    }
-    .title{
-        font-size: 3rem;
-    }
-}
-
-@media screen and (min-width: 1260px){
-    .carousel-items{
-        width: 1200px;
-    }
-    .title{
-        font-size: 4rem;
-    }
-}
-
-@media screen and (min-width: 1560px){
-    .carousel-items{
-        width: 1500px;
-    }
 }
 
 .carousel-images{
@@ -89,7 +61,7 @@ body{
 }
 
 .carousel-item{
-    width: 300px;
+    width: var(--width-item);
     height: 400px;
 }
 
@@ -113,13 +85,62 @@ body{
     background-color: #222;
     border-radius: 5px;
     padding: .5rem;
-    font-size: 4em;
+    font-size: 1.5em;
     cursor: pointer;
     color: #4b6cb7;
     /* outline: 1px solid green; */
     transition: color .5s;
 }
 
-.carousel-arrow-left:hover, .carousel-arrow-right:hover{
-    color: #fff;
+@media screen and (min-width: 768px){
+    
+    .carousel-items{
+        width: calc(var(--width-item) * 2);
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+    .carousel-arrow-left, .carousel-arrow-right{
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .carousel-items{
+        width: calc(var(--width-item) * 3);
+    }
+    .title{
+        font-size: 2.8rem;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    :root{
+        --width-item: 275px;
+    }
+    .carousel-items{
+        width: calc(var(--width-item) * 4);
+    }
+    .carousel-item{
+        width: var(--width-item)
+    }
+    .title{
+        font-size: 3.3rem;
+    }
+    .carousel-arrow-left, .carousel-arrow-right{
+        font-size: 2.6rem;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    :root{
+        --width-item: 268px;
+    }
+    .carousel-items{
+        width: calc(var(--width-item) * 5);
+    }
+    .carousel-item{
+        width: var(--width-item)
+    }
 }

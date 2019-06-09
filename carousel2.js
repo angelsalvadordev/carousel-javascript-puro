@@ -36,7 +36,7 @@ class Carousel {
             } else {
                 this.itemsContainer.style.left = `${-count * w.widthItem}px`
             }
-
+            console.log(w.widthItem)
             console.log(count)
         })
         this.arrowRight.addEventListener('click', () => {
@@ -47,7 +47,20 @@ class Carousel {
             } else {
                 this.itemsContainer.style.left = `${-count * w.widthItem}px`
             }
+            console.log(w.widthItem)
+            console.log(count)
+        })
 
+        addEventListener('resize', () => {
+            w = this.getSizesElements()
+            this.itemsContainer.style.left = `${-count * w.widthItem}px`
+
+            if (count >= w.maxMovement / w.widthItem) {
+                count = w.maxMovement / w.widthItem
+                this.itemsContainer.style.left = `${-count * w.widthItem}px`
+            }
+            // console.log(actions.count)
+            console.log(w.widthItem)
             console.log(count)
         })
     }
@@ -55,12 +68,9 @@ class Carousel {
     runCarousel() {
         this.actionsCarousel()
 
-        addEventListener('resize', () => {
-            this.actionsCarousel()
-        })
     }
 }
 
 const myCarousel = new Carousel('carousel-container', 'show-carousel', 'items-container', 'arrow-left', 'arrow-right')
 
-myCarousel.runCarousel();
+let hola = myCarousel.runCarousel();
