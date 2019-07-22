@@ -49,3 +49,6 @@ Manage a carousel with vanilla javascript, using animations in css
 
 ## View demo
 [Carousel in vanilla javascript](https://angelsalvadordev.github.io/carousel-javascript-puro/)
+=======
+# Creacion de un carousel con Javascript Puro
+Creacion de un carousel con javascript puro usando las animaciones en css.
