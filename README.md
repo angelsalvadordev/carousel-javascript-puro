@@ -27,7 +27,7 @@ Lograr un carousel con javascript puro usando las animaciones en css.
 -----------------------------------
 ENGLISH DOCUMENTATION
 
-# Searcher with pixabay API in React
+# Carousel of images with Vanilla Javascript
 
 ![image carousel with vanilla javascript responsive](/images/demo-carousel.jpg "image carousel with vanilla javascript responsive")
 
